@@ -1,0 +1,14 @@
+{{#unless redux}}
+src/store
+{{/unless}}
+{{#unless router}}
+src/router
+{{/unless}}
+{{#unless scss}}
+.scss
+{{/unless}}
+{{#unless less}}
+.less
+{{/unless}}
+
+templates.ignore
