@@ -8,6 +8,18 @@ import styles from './container.less'
 const { SubMenu } = Menu
 const { Header, Sider, Footer } = Layout
 
+const siderStyle = {
+  background: '#fff',
+  boxShadow: '2px 0px 5px 0px rgba(0,0,0,0.06)',
+  position: 'relative',
+  zIndex: '9'
+}
+const menuStyle = {
+  height: '100vh', borderRight: 0
+}
+const footerStyle = { textAlign: 'center' }
+const layoutStyle = { padding: '0 12px 12px' }
+
 class Container extends Component {
   constructor(props) {
     super(props)
@@ -62,26 +74,21 @@ class Container extends Component {
           <Layout>
             <Sider
               width={200}
-              style={{
-                background: '#fff',
-                boxShadow: '2px 0px 5px 0px rgba(0,0,0,0.06)',
-                position: 'relative',
-                zIndex: '9'
-              }}
+              style={siderStyle}
             >
               <Menu
                 mode='inline'
                 selectedKeys={this.state.selectedKeys}
                 defaultOpenKeys={['sub0', 'sub1']}
-                style={{ height: '100vh', borderRight: 0 }}
+                style={menuStyle}
                 onSelect={this.onSelect.bind(this)}
               >
                 {subMenuList}
               </Menu>
             </Sider>
-            <Layout style={{ padding: '0 12px 12px' }}>{this.props.currentUser ? children : ''}</Layout>
+            <Layout style={layoutStyle}>{this.props.currentUser ? children : ''}</Layout>
           </Layout>
-          <Footer style={{ textAlign: 'center' }}>React-cli ©2019 Created by wangqi</Footer>
+          <Footer style={footerStyle}>React-cli ©2019 Created by wangqi</Footer>
         </Layout>
       </div>
     )
