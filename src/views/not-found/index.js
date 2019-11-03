@@ -1,6 +1,24 @@
 import React from 'react'
+
+{{#if antd}}
 import { Row } from 'antd'
+{{/if}}
+
+{{#if element}}
+import { Layout } from 'element-react'
+{{/if}}
+
+{{#with less}}
 import styles from './index.less'
+{{/with}}
+{{#with scss}}
+import styles from './index.scss'
+{{/with}}
+
+{{#if element}}
+const { Row } = Layout
+{{/if}}
+
 import find from '../../assets/img/find.png'
 
 const NotFound = () => {
