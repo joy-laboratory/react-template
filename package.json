@@ -23,10 +23,8 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-loadable": "^5.5.0",
-    {{#if router}}
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
-    {{/if}}
     {{#if redux}}
     "redux": "^4.0.1",
     "react-redux": "^6.0.0",
