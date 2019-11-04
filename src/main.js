@@ -30,7 +30,9 @@ ReactDOM.render(
     </Router>
   </Provider>,
   {{else}}
-  <Routers />,
+  <Router history={createHashHistory()}>
+    <Routers />
+  </Router>,
   {{/if}}
   document.getElementById('app')
 )
