@@ -26,9 +26,11 @@ module.exports = {
     }
   },
   extends: ['eslint:recommended', 'plugin:react/recommended'],
-
+  plugins: ['react-hooks'],
   // add your custom rules here
   rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     'max-len': [1, 120, 2, { ignoreComments: true }],
     'accessor-pairs': 2,
     'arrow-spacing': [
